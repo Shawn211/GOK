@@ -1,6 +1,6 @@
 # gok
 
-|语法|效果|
+|Author|Shawn|
 |----|-----|
-|*[查看README]|[README](/README.md)|
-|*[查看Tree]|[Tree](/Tree.md)|
+|查看README|[README](/README.md)|
+|查看Tree|[Tree](/Tree.md)|
