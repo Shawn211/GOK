@@ -1,3 +1,5 @@
 # gok
 
-|[README](/README.md)|[Tree](/Tree.md)|
+|----|-----|
+|*[查看README]|[README](/README.md)|
+|*[查看Tree]|[Tree](/Tree.md)|
