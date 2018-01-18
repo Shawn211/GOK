@@ -2,7 +2,7 @@
 ****
 |Author|查看README|查看Tree|查看成果|
 |:------:|:-------:|:-------:|:-------:|
-|Shawn|[README](/README.md)|[Tree](/Tree.md)|[成果展示](/Tree.md#成果展示)|
+|Shawn|[README](/README.md)|[Tree](/Tree.md)|[成果展示](/README.md#成果展示)|
 ****
 
 F:.  
