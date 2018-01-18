@@ -16,5 +16,5 @@
 ![](/image/孙悟空.jpg)
 ---
 ### 个人观点
-    `①` pipelines中可以用`file_path`函数改写图片名以及文件夹名。此处用`image_guid`存储图片名，再用`filename`存储文件夹名和文件名，即路径，最后返回`filename`便能创建特定文件名。
+    `①` pipelines中可以用`file_path`函数改写图片名以及文件夹名。此处用`image_guid`存储图片名，再用`filename`存储文件夹名和文件名，即路径，最后返回`filename`便能创建特定文件名。  
     `②` pipelines中get_media_requests函数中，当yield Request图片时，带上meta参数，将当前的`英雄名`、`皮肤名`以及`当前皮肤于皮肤list的索引index`一并传送到`file_path`函数的`request`参数中。
