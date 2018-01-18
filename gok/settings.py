@@ -15,7 +15,8 @@ SPIDER_MODULES = ['gok.spiders']
 NEWSPIDER_MODULE = 'gok.spiders'
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
 ITEM_PIPELINES = {'gok.pipelines.GokPipeline':300}
-IMAGES_STORE='F:\GitHub\GitHub\gok\heroes'
+
+IMAGES_STORE='F:\GitHub\GitHub\GOK\heroes'
 IMAGES_EXPIRES=90
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

@@ -11,4 +11,6 @@ import scrapy
 class GokItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    hero=scrapy.Field()
+    ename=scrapy.Field()
+    cname=scrapy.Field()
+    skins=scrapy.Field()
