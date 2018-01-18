@@ -1,6 +1,5 @@
-# gok
+# GOK
 
-|Author|Shawn|
-|----|-----|
-|查看README|[README](/README.md)|
-|查看Tree|[Tree](/Tree.md)|
+|----|-----|-----|
+|Author|查看README|查看Tree|
+|Shawn|[README](/README.md)|[Tree](/Tree.md)|
