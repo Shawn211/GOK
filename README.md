@@ -16,4 +16,4 @@
 ![](/image/孙悟空.jpg)
 ---
 ### 个人观点
-    pipelines中可以用file_path函数改写图片名以及文件夹名。此处用image_guid存储图片名，再用filename存储文件夹名和文件名，即路径，最后返回filename便能创建特定文件名。
+`pipelines中可以用file_path函数改写图片名以及文件夹名。此处用image_guid存储图片名，再用filename存储文件夹名和文件名，即路径，最后返回filename便能创建特定文件名。`
