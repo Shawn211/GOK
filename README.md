@@ -1,6 +1,6 @@
 # gok
 
-`[README](/README.md)` `[Tree](/Tree.md)`
+|`[README](/README.md)`|`[Tree](/Tree.md)`|
 
 |语法|效果|
 |----|-----|
