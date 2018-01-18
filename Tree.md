@@ -1,409 +1,416 @@
+# GOK
+****
+|Author|æŸ¥çœ‹README|æŸ¥çœ‹Tree|
+|:------:|:-------:|:-------:|
+|Shawn|[README](/README.md)|[Tree](/Tree.md)|
+****
+
 F:.  
-©¦  .gitattributes  
-©¦  herolist.json  
-©¦  README.md  
-©¦  run.py  
-©¦  scrapy.cfg  
-©¦  
-©À©¤gok  
-©¦  ©¦  items.py  
-©¦  ©¦  items.pyc  
-©¦  ©¦  middlewares.py  
-©¦  ©¦  pipelines.py  
-©¦  ©¦  pipelines.pyc  
-©¦  ©¦  settings.py  
-©¦  ©¦  settings.pyc  
-©¦  ©¦  __init__.py  
-©¦  ©¦  __init__.pyc  
-©¦  ©¦  
-©¦  ©¸©¤spiders  
-©¦          gokpic.py  
-©¦          gokpic.pyc  
-©¦          __init__.py  
-©¦          __init__.pyc  
-©¦  
-©¸©¤heroes  
-    ©À©¤²»Öª»ðÎè  
-    ©¦      Ã÷ÃÄÁÒÑæ.jpg  
-    ©¦  
-    ©À©¤¶«»ÊÌ«Ò»  
-    ©¦      ¶«º£ÁúÍõ.jpg  
-    ©¦      ÊÉÃðÈÕÊ´.jpg  
-    ©¦  
-    ©À©¤ÑÇÉª  
-    ©¦      Ê¥ÆïÖ®Á¦.jpg  
-    ©¦      ËÀÍöÆïÊ¿.jpg  
-    ©¦      Ê¨ÐÄÍõ.jpg  
-    ©¦  
-    ©À©¤À¼ÁêÍõ  
-    ©¦      °µÓ°µ¶·æ.jpg  
-    ©¦      °µÒþÁÔÊÞÕß.jpg  
-    ©¦      ÒþÈÐ.jpg  
-    ©¦  
-    ©À©¤¹ØÓð  
-    ©¦      Ò»Æïµ±Ç§.jpg  
-    ©¦      ±ù·æÕ½Éñ.jpg  
-    ©¦      ÌìÆôÆïÊ¿.jpg  
-    ©¦      ÁúÌÚÍòÀï.jpg  
-    ©¦  
-    ©À©¤µäÎ¤  
-    ©¦      ¿ñÕ½Ê¿.jpg  
-    ©¦      »Æ½ðÎäÊ¿.jpg  
-    ©¦  
-    ©À©¤Áõ±¸  
-    ©¦      ÍòÊÂÈçÒâ.jpg  
-    ©¦      ÈÊµÂÒåÇ¹.jpg  
-    ©¦      ººÕÑÁÒµÛ.jpg  
-    ©¦      Å¦Ô¼½Ì¸¸.jpg  
-    ©¦  
-    ©À©¤Áõìø  
-    ©¦      ±©×ß»ú¹Ø.jpg  
-    ©¦      ÉðÊ¿ÐÜß÷.jpg  
-    ©¦      Ó¢ß÷Ò°Íû.jpg  
-    ©¦  
-    ©À©¤Áõ°î  
-    ©¦      Ë«Ãæ¾ýÖ÷.jpg  
-    ©¦      Ê¥µîÖ®¹â.jpg  
-    ©¦      µÂ¹ÅÀ­²®¾ô.jpg  
-    ©¦  
-    ©À©¤ºóôà  
-    ©¦      °ëÉñÖ®¹­.jpg  
-    ©¦      ¾«ÁéÍõ.jpg  
-    ©¦      °¢¶û·¨Ð¡¶Ó.jpg  
-    ©¦  
-    ©À©¤ÂÀ²¼  
-    ©¦      Ê¥µ®¿ñ»¶.jpg  
-    ©¦      ÌìÄ§çÔÂÒ.jpg  
-    ©¦      ÎÞË«Ö®Ä§.jpg  
-    ©¦      Ä©ÈÕ»ú¼×.jpg  
-    ©¦  
-    ©À©¤ÖÜè¤  
-    ©¦      º£¾ü´ó½«.jpg  
-    ©¦      Õæ°®ÖÁÉÏ.jpg  
-    ©¦      ÌúÑª¶¼¶½.jpg  
-    ©¦  
-    ©À©¤ÄÄß¸  
-    ©¦      ÈýÌ«×Ó.jpg  
-    ©¦      èîæñÑ×Ç¹.jpg  
-    ©¦  
-    ©À©¤Ä«×Ó  
-    ©¦      ºÍÆ½ÊØÍû.jpg  
-    ©¦      ½ø»÷Ä«×ÓºÅ.jpg  
-    ©¦      ½ðÊô·ç±©.jpg  
-    ©¦      ÁúÆïÊ¿.jpg  
-    ©¦  
-    ©À©¤ÏÄºîª  
-    ©¦      ²»î¿Ö®·ç.jpg  
-    ©¦      ³Ë·çÆÆÀË.jpg  
-    ©¦      Õ½ÕùÆïÊ¿.jpg  
-    ©¦  
-    ©À©¤´óÇÇ  
-    ©¦      ÒÁÊÆÎ×Å®.jpg  
-    ©¦      ²×º£Ö®ê×.jpg  
-    ©¦  
-    ©À©¤Ì«ÒÒÕæÈË  
-    ©¦      Ô²×ÀÆïÊ¿.jpg  
-    ©¦      Á¶½ð´óÊ¦.jpg  
-    ©¦      ÷Ò÷Ñ.jpg  
-    ©¦  
-    ©À©¤Å®æ´  
-    ©¦      ÄáÂÞºÓÅ®Éñ.jpg  
-    ©¦      ÖÁ¸ß´´ÊÀ.jpg  
-    ©¦  
-    ©À©¤æ§¼º  
-    ©¦      ÏÉ¾³°®ÀöË¿.jpg  
-    ©¦      Å®ÆÍ¿§·È.jpg  
-    ©¦      ÉÙÅ®°¢Àê.jpg  
-    ©¦      ÈÈÇéÉ£°Í.jpg  
-    ©¦      ÷ÈÁ¦Î¬¼ÓË¹.jpg  
-    ©¦      ÷È»óÖ®ºü.jpg  
-    ©¦  
-    ©À©¤½ª×ÓÑÀ  
-    ©¦      Ì«¹ÅÄ§µ¼.jpg  
-    ©¦      Ê±ÉÐ½Ì¸¸.jpg  
-    ©¦  
-    ©À©¤ÄÈ¿ÉÂ¶Â¶  
-    ©¦      Ó¥Ö®ÊØ»¤.jpg  
-    ©¦  
-    ©À©¤ÙøÕþ  
-    ©¦      ÓÅÑÅÁµÈË.jpg  
-    ©¦      Ò¡¹ö¾ÞÐÇ.jpg  
-    ©¦      °µÒ¹¹ó¹«×Ó.jpg  
-    ©¦      ÍõÕß¶À×ð.jpg  
-    ©¦  
-    ©À©¤ËïÉÐÏã  
-    ©¦      Ç§½ðÖØåó.jpg  
-    ©¦      Ä©ÈÕ»ú¼×.jpg  
-    ©¦      É±ÊÖ²»Ì«Àä.jpg  
-    ©¦      Ë®¹ûÌðÐÄ.jpg  
-    ©¦      »ðÅÚÇ§½ð.jpg  
-    ©¦      Ç¾Þ±ÁµÈË.jpg  
-    ©¦  
-    ©À©¤ËïÎò¿Õ  
-    ©¦      µØÓü»ð.jpg  
-    ©¦      ÃÀºïÍõ.jpg  
-    ©¦      ÖÁ×ð±¦.jpg  
-    ©¦      Î÷²¿´óïÚ¿Í.jpg  
-    ©¦      ÆëÌì´óÊ¥.jpg  
-    ©¦  
-    ©À©¤Ëïë÷  
-    ©¦      ÌìÊ¹Ö®Òí.jpg  
-    ©¦      Ñý¾«Íõ.jpg  
-    ©¦      Î´À´ÂÃÐÐ.jpg  
-    ©¦      ÄæÁ÷Ö®Ê±.jpg  
-    ©¦  
-    ©À©¤°²ç÷À­  
-    ©¦      °µÒ¹ÂÜÀò.jpg  
-    ©¦      ÍæÅ¼¶Ô¶ÔÅö.jpg  
-    ©¦      Ä§·¨Ð¡³øÄï.jpg  
-    ©¦  
-    ©À©¤¹¬±¾Îä²Ø  
-    ©¦      ÍòÏó³õÐÂ.jpg  
-    ©¦      ½£Ê¥.jpg  
-    ©¦      µØÓüÖ®ÑÛ.jpg  
-    ©¦      Î´À´¼ÍÔª.jpg  
-    ©¦      °ÔÍõÍè.jpg  
-    ©¦      ¹í½£Îä²Ø.jpg  
-    ©¦  
-    ©À©¤Ð¡ÇÇ  
-    ©¦      ÍòÊ¥Ç°Ò¹.jpg  
-    ©¦      Ìì¶ìÖ®ÃÎ.jpg  
-    ©¦      ÁµÖ®Î¢·ç.jpg  
-    ©¦      ´¿°×»¨¼Þ.jpg  
-    ©¦      çÍ·×¶À½ÇÊÞ.jpg  
-    ©¦  
-    ©À©¤¸É½«ÄªÐ°  
-    ©¦      ´ãÃüË«½£.jpg  
-    ©¦      µÚÆßÈËÅ¼.jpg  
-    ©¦  
-    ©À©¤×¯ÖÜ  
-    ©¦      ò×Â¥Íõ.jpg  
-    ©¦      åÐÒ£»ÃÃÎ.jpg  
-    ©¦      ÀðÓãÖ®ÃÎ.jpg  
-    ©¦  
-    ©À©¤Á®ÆÄ  
-    ©¦      µØÓüÑÒ»ê.jpg  
-    ©¦      ÕýÒå±¬ºä.jpg  
-    ©¦  
-    ©À©¤ÕÅÁ¼  
-    ©¦      Ò»Ç§ÁãÒ»Ò¹.jpg  
-    ©¦      ÌìÌÃ¸£Òô.jpg  
-    ©¦      ÑÔÁéÖ®Êé.jpg  
-    ©¦  
-    ©À©¤ÕÅ·É  
-    ©¦      ÂÒÊÀ»¢³¼.jpg  
-    ©¦      Îå¸£Í¬ÐÄ.jpg  
-    ©¦      ½ûÑª¿ñÊÞ.jpg  
-    ©¦  
-    ©À©¤³É¼ªË¼º¹  
-    ©¦      Î¬¾©ÂÓ¶áÕß.jpg  
-    ©¦      ²ÔÀÇÄ©Òá.jpg  
-    ©¦  
-    ©À©¤±âÈµ  
-    ©¦      »¯Éí²©Ê¿.jpg  
-    ©¦      ÉÆ¶ñ¹ÖÒ½.jpg  
-    ©¦      ¾ÈÊÀÖ®Í«.jpg  
-    ©¦      Á¶½ðÍõ.jpg  
-    ©¦  
-    ©À©¤Ã÷ÊÀÒþ  
-    ©¦      Õ¼ÐÇÊõÊ¿.jpg  
-    ©¦      Áé»ê½Ù²·.jpg  
-    ©¦  
-    ©À©¤²Ü²Ù  
-    ©¦      ÓÄÁé´¬³¤.jpg  
-    ©¦      ËÀÉñÀ´ÁË.jpg  
-    ©¦      ³¬ÄÜÕ½¾¯.jpg  
-    ©¦      ÏÊÑªèÉÐÛ.jpg  
-    ©¦  
-    ©À©¤ÀîÔª·¼  
-    ©¦      ÌØÖÖ²¿¶Ó.jpg  
-    ©¦      Íõ¶¼ÃÜÌ½.jpg  
-    ©¦      ºÚÃ¨°®ÌÇ¹û.jpg  
-    ©¦  
-    ©À©¤Àî°×  
-    ©¦      ·ïÇó»Ë.jpg  
-    ©¦      Ç§ÄêÖ®ºü.jpg  
-    ©¦      ·¶º£ÐÁ.jpg  
-    ©¦      ÇàÁ«½£ÏÉ.jpg  
-    ©¦  
-    ©À©¤Ñîê¯  
-    ©¦      °£¼°·¨ÀÏ.jpg  
-    ©¦      ¸ùÔ´Ö®Ä¿.jpg  
-    ©¦  
-    ©À©¤ÃÎÆæ  
-    ©¦      ÈëÃÎÖ®Áé.jpg  
-    ©¦      ÃÀÃÎ³ÉÕæ.jpg  
-    ©¦  
-    ©À©¤éÙÓÒ¾©  
-    ©¦      ÉñÃÎÒ»µ¶.jpg  
-    ©¦  
-    ©À©¤ÎäÔòÌì  
-    ©¦      ¶«·½²»°Ü.jpg  
-    ©¦      Å®µÛ.jpg  
-    ©¦      º£ÑóÖ®ÐÄ.jpg  
-    ©¦  
-    ©À©¤Å£Ä§  
-    ©¦      ¾«Ó¢Çõ³¤.jpg  
-    ©¦      Î÷²¿´óïÚ¿Í.jpg  
-    ©¦  
-    ©À©¤µÒÈÊ½Ü  
-    ©¦      ¶Ï°¸´óÊ¦.jpg  
-    ©¦      ³¬Ê±¿ÕÕ½Ê¿.jpg  
-    ©¦      ½õÒÂÎÀ.jpg  
-    ©¦      ÒõÑôÊ¦.jpg  
-    ©¦      Ä§ÊõÊ¦.jpg  
-    ©¦  
-    ©À©¤ÍõÕÑ¾ý  
-    ©¦      Å¼Ïñ¸èÊÖ.jpg  
-    ©¦      ±ùÑ©Ö®»ª.jpg  
-    ©¦      ·ï»ËÓÚ·É.jpg  
-    ©¦      ¾«Áé¹«Ö÷.jpg  
-    ©¦  
-    ©À©¤Õç¼§  
-    ©¦      ±ùÑ©Ô²ÎèÇú.jpg  
-    ©¦      ÂåÉñ½µÁÙ.jpg  
-    ©¦      ÓÎÔ°¾ªÃÎ.jpg  
-    ©¦      »¨ºÃÈË¼ä.jpg  
-    ©¦  
-    ©À©¤°×Æð  
-    ©¦      ×îÖÕ±øÆ÷.jpg  
-    ©¦      Õø.jpg  
-    ©¦      °×É«ËÀÉñ.jpg  
-    ©¦  
-    ©À©¤°ÙÀïÊØÔ¼  
-    ©¦      ¾øÓ°ÉñÇ¹.jpg  
-    ©¦      ¾²Ú×Ö®ÑÛ.jpg  
-    ©¦  
-    ©À©¤°ÙÀïÐþ²ß  
-    ©¦      Ïù¿ñÖ®Á­.jpg  
-    ©¦      ÍþÄáË¹¿ñ»¶.jpg  
-    ©¦  
-    ©À©¤³ÌÒ§½ð  
-    ©¦      »ª¶û½Ö´óºà.jpg  
-    ©¦      ÐÇ¼ÊÂ½Õ½¶Ó.jpg  
-    ©¦      ÈÈÁÒÖ®¸«.jpg  
-    ©¦      °®ÓëÕýÒå.jpg  
-    ©¦  
-    ©À©¤ÀÏ·ò×Ó  
-    ©¦      Íò¹Å³¤Ã÷.jpg  
-    ©¦      Ê¥µ®ÀÏÈË.jpg  
-    ©¦      ³±Á÷ÏÉÈË.jpg  
-    ©¦  
-    ©À©¤ØÂÔÂ  
-    ©¦      ´óÇØÐûÌ«ºó.jpg  
-    ©¦      ÓÀºãÖ®ÔÂ.jpg  
-    ©¦      ºìÌÒ»Êºó.jpg  
-    ©¦  
-    ©À©¤»¨Ä¾À¼  
-    ©¦      ´«ËµÖ®ÈÐ.jpg  
-    ©¦      ÍÃÅ®ÀÉ.jpg  
-    ©¦      ½£ÎèÕß.jpg  
-    ©¦      Ë®¾§ÁÔÁúÕß.jpg  
-    ©¦  
-    ©À©¤ËÕÁÒ  
-    ©¦      ²»ÇüÌú±Ú.jpg  
-    ©¦      °®ÓëºÍÆ½.jpg  
-    ©¦  
-    ©À©¤²ÌÎÄ¼§  
-    ©¦      Ììô¥ÏÒÒô.jpg  
-    ©¦      Ç¾Þ±Íõ×ù.jpg  
-    ©¦  
-    ©À©¤ÓÝ¼§  
-    ©¦      ¿­¶ûÌØÅ®Íõ.jpg  
-    ©¦      ¼ÓÀÕ±ÈÐ¡½ã.jpg  
-    ©¦      É­Ö®·çÁé.jpg  
-    ©¦      °ÔÍõ±ð¼§.jpg  
-    ©¦  
-    ©À©¤Öî¸ðÁÁ  
-    ©¦      ÐÇº½Ö¸»Ó¹Ù.jpg  
-    ©¦      ¾ø´úÖÇÄ±.jpg  
-    ©¦      »Æ½ð·Ö¸îÂÊ.jpg  
-    ©¦  
-    ©À©¤õõ²õ  
-    ©¦      ÖÙÏÄÒ¹Ö®ÃÎ.jpg  
-    ©¦      Ê¥µ®Áµ¸è.jpg  
-    ©¦      ÒìÓòÎèÄï.jpg  
-    ©¦      ¾øÊÀÎè¼§.jpg  
-    ©¦      ÖðÃÎÖ®Òô.jpg  
-    ©¦  
-    ©À©¤ÕÔÔÆ  
-    ©¦      Îû¹þÌìÍõ.jpg  
-    ©¦      ÒýÇæÖ®ÐÄ.jpg  
-    ©¦      ÈÌ¡ñÑ×Ó°.jpg  
-    ©¦      Î´À´¼ÍÔª.jpg  
-    ©¦      °×Ö´ÊÂ.jpg  
-    ©¦      »Ê¼ÒÉÏ½«.jpg  
-    ©¦      ²ÔÌìÏèÁú.jpg  
-    ©¦  
-    ©À©¤´ïÄ¦  
-    ©¦      ´ó·¢Ã÷¼Ò.jpg  
-    ©¦      È­É®.jpg  
-    ©¦      È­Íõ.jpg  
-    ©¦  
-    ©À©¤ÖÓÎÞÑÞ  
-    ©¦      º£Ì²ÀöÓ°.jpg  
-    ©¦      ÍõÕßÖ®´¸.jpg  
-    ©¦      Éú»¯¾¯½ä.jpg  
-    ©¦      Ò°ÂùÖ®´¸.jpg  
-    ©¦  
-    ©À©¤ÖÓØ¸  
-    ©¦      µØ¸®ÅÐ¹Ù.jpg  
-    ©¦      ÐéÁé³ÇÅÐ.jpg  
-    ©¦  
-    ©À©¤îø  
-    ©¦      ÆÆÃðÈÐ·æ.jpg  
-    ©¦      ÁúÓòÁìÖ÷.jpg  
-    ©¦  
-    ©À©¤°¢éð  
-    ©¦      ÐÅÄîÖ®ÈÐ.jpg  
-    ©¦      °µÒ¹Ã¨Äï.jpg  
-    ©¦      °®ÐÄ»¤Àí.jpg  
-    ©¦      ÖÂÃü·ç»ª.jpg  
-    ©¦  
-    ©À©¤ÑÅµäÄÈ  
-    ©¦      Ê¥ÓòÓàêÍ.jpg  
-    ©¦      Õ½ÕùÅ®Éñ.jpg  
-    ©¦  
-    ©À©¤Â¶ÄÈ  
-    ©¦      ¸çÌØÃµ¹å.jpg  
-    ©¦      ÔÂ¹âÖ®Å®.jpg  
-    ©¦      ×ÏÏ¼ÏÉ×Ó.jpg  
-    ©¦      ç³ºìÖ®ÈÐ.jpg  
-    ©¦  
-    ©À©¤º«ÐÅ  
-    ©¦      ¹úÊ¿ÎÞË«.jpg  
-    ©¦      ½ÌÍ¢ÌØÊ¹.jpg  
-    ©¦      °×ÁúÒ÷.jpg  
-    ©¦      ½ÖÍ·°ÔÍõ.jpg  
-    ©¦      ÖðÃÎÖ®Ó°.jpg  
-    ©¦  
-    ©À©¤ÏîÓð  
-    ©¦      µÛ¹úÔªË§.jpg  
-    ©¦      º£Ì²ÅÉ¶Ô.jpg  
-    ©¦      Ö°°ôÍõÅÆ.jpg  
-    ©¦      ²Ôñ·Ö®¹â.jpg  
-    ©¦      °ÔÍõ.jpg  
-    ©¦      °ÔÍõ±ð¼§.jpg  
-    ©¦  
-    ©À©¤Âí¿É²¨ÂÞ  
-    ©¦      ¼¤ÇéÂÌÒð.jpg  
-    ©¦      Ô¶ÓÎÖ®Ç¹.jpg  
-    ©¦  
-    ©À©¤¸ß½¥Àë  
-    ©¦      ÅÑÄæÒ÷ÓÎ.jpg  
-    ©¦      ËÀÍöÒ¡¹ö.jpg  
-    ©¦      ½ðÊô¿ñ³±.jpg  
-    ©¦  
-    ©À©¤¹í¹È×Ó  
-    ©¦      ÍòÎïÓÐÁé.jpg  
-    ©¦      °¢Ä¦Ë¾¹«¾ô.jpg  
-    ©¦  
-    ©À©¤Â³°àÆßºÅ  
-    ©¦      Ä¾Å¼ÆæÓö¼Ç.jpg  
-    ©¦      »ú¹ØÔìÎï.jpg  
-    ©¦      µçÍæÐ¡×Ó.jpg  
-    ©¦      ¸£Â»ÐÖµÜ.jpg  
-    ©¦  
-    ©¸©¤»ÆÖÒ  
-            È¼»êÖØÅÚ.jpg  
-            Ö¥¼Ó¸ç½Ì¸¸.jpg  
+â”‚  .gitattributes  
+â”‚  herolist.json  
+â”‚  README.md  
+â”‚  run.py  
+â”‚  scrapy.cfg  
+â”‚  
+â”œâ”€gok  
+â”‚  â”‚  items.py  
+â”‚  â”‚  items.pyc  
+â”‚  â”‚  middlewares.py  
+â”‚  â”‚  pipelines.py  
+â”‚  â”‚  pipelines.pyc  
+â”‚  â”‚  settings.py  
+â”‚  â”‚  settings.pyc  
+â”‚  â”‚  __init__.py  
+â”‚  â”‚  __init__.pyc  
+â”‚  â”‚  
+â”‚  â””â”€spiders  
+â”‚          gokpic.py  
+â”‚          gokpic.pyc  
+â”‚          __init__.py  
+â”‚          __init__.pyc  
+â”‚  
+â””â”€heroes  
+    â”œâ”€ä¸çŸ¥ç«èˆž  
+    â”‚      æ˜Žåªšçƒˆç„°.jpg  
+    â”‚  
+    â”œâ”€ä¸œçš‡å¤ªä¸€  
+    â”‚      ä¸œæµ·é¾™çŽ‹.jpg  
+    â”‚      å™¬ç­æ—¥èš€.jpg  
+    â”‚  
+    â”œâ”€äºšç‘Ÿ  
+    â”‚      åœ£éª‘ä¹‹åŠ›.jpg  
+    â”‚      æ­»äº¡éª‘å£«.jpg  
+    â”‚      ç‹®å¿ƒçŽ‹.jpg  
+    â”‚  
+    â”œâ”€å…°é™µçŽ‹  
+    â”‚      æš—å½±åˆ€é”‹.jpg  
+    â”‚      æš—éšçŒŽå…½è€….jpg  
+    â”‚      éšåˆƒ.jpg  
+    â”‚  
+    â”œâ”€å…³ç¾½  
+    â”‚      ä¸€éª‘å½“åƒ.jpg  
+    â”‚      å†°é”‹æˆ˜ç¥ž.jpg  
+    â”‚      å¤©å¯éª‘å£«.jpg  
+    â”‚      é¾™è…¾ä¸‡é‡Œ.jpg  
+    â”‚  
+    â”œâ”€å…¸éŸ¦  
+    â”‚      ç‹‚æˆ˜å£«.jpg  
+    â”‚      é»„é‡‘æ­¦å£«.jpg  
+    â”‚  
+    â”œâ”€åˆ˜å¤‡  
+    â”‚      ä¸‡äº‹å¦‚æ„.jpg  
+    â”‚      ä»å¾·ä¹‰æžª.jpg  
+    â”‚      æ±‰æ˜­çƒˆå¸.jpg  
+    â”‚      çº½çº¦æ•™çˆ¶.jpg  
+    â”‚  
+    â”œâ”€åˆ˜ç¦…  
+    â”‚      æš´èµ°æœºå…³.jpg  
+    â”‚      ç»…å£«ç†Šå–µ.jpg  
+    â”‚      è‹±å–µé‡Žæœ›.jpg  
+    â”‚  
+    â”œâ”€åˆ˜é‚¦  
+    â”‚      åŒé¢å›ä¸».jpg  
+    â”‚      åœ£æ®¿ä¹‹å…‰.jpg  
+    â”‚      å¾·å¤æ‹‰ä¼¯çˆµ.jpg  
+    â”‚  
+    â”œâ”€åŽç¾¿  
+    â”‚      åŠç¥žä¹‹å¼“.jpg  
+    â”‚      ç²¾çµçŽ‹.jpg  
+    â”‚      é˜¿å°”æ³•å°é˜Ÿ.jpg  
+    â”‚  
+    â”œâ”€å•å¸ƒ  
+    â”‚      åœ£è¯žç‹‚æ¬¢.jpg  
+    â”‚      å¤©é­”ç¼­ä¹±.jpg  
+    â”‚      æ— åŒä¹‹é­”.jpg  
+    â”‚      æœ«æ—¥æœºç”².jpg  
+    â”‚  
+    â”œâ”€å‘¨ç‘œ  
+    â”‚      æµ·å†›å¤§å°†.jpg  
+    â”‚      çœŸçˆ±è‡³ä¸Š.jpg  
+    â”‚      é“è¡€éƒ½ç£.jpg  
+    â”‚  
+    â”œâ”€å“ªå’  
+    â”‚      ä¸‰å¤ªå­.jpg  
+    â”‚      æ¡€éªœç‚Žæžª.jpg  
+    â”‚  
+    â”œâ”€å¢¨å­  
+    â”‚      å’Œå¹³å®ˆæœ›.jpg  
+    â”‚      è¿›å‡»å¢¨å­å·.jpg  
+    â”‚      é‡‘å±žé£Žæš´.jpg  
+    â”‚      é¾™éª‘å£«.jpg  
+    â”‚  
+    â”œâ”€å¤ä¾¯æƒ‡  
+    â”‚      ä¸ç¾ä¹‹é£Ž.jpg  
+    â”‚      ä¹˜é£Žç ´æµª.jpg  
+    â”‚      æˆ˜äº‰éª‘å£«.jpg  
+    â”‚  
+    â”œâ”€å¤§ä¹”  
+    â”‚      ä¼ŠåŠ¿å·«å¥³.jpg  
+    â”‚      æ²§æµ·ä¹‹æ›œ.jpg  
+    â”‚  
+    â”œâ”€å¤ªä¹™çœŸäºº  
+    â”‚      åœ†æ¡Œéª‘å£«.jpg  
+    â”‚      ç‚¼é‡‘å¤§å¸ˆ.jpg  
+    â”‚      é¥•é¤®.jpg  
+    â”‚  
+    â”œâ”€å¥³å¨²  
+    â”‚      å°¼ç½—æ²³å¥³ç¥ž.jpg  
+    â”‚      è‡³é«˜åˆ›ä¸–.jpg  
+    â”‚  
+    â”œâ”€å¦²å·±  
+    â”‚      ä»™å¢ƒçˆ±ä¸½ä¸.jpg  
+    â”‚      å¥³ä»†å’–å•¡.jpg  
+    â”‚      å°‘å¥³é˜¿ç‹¸.jpg  
+    â”‚      çƒ­æƒ…æ¡‘å·´.jpg  
+    â”‚      é­…åŠ›ç»´åŠ æ–¯.jpg  
+    â”‚      é­…æƒ‘ä¹‹ç‹.jpg  
+    â”‚  
+    â”œâ”€å§œå­ç‰™  
+    â”‚      å¤ªå¤é­”å¯¼.jpg  
+    â”‚      æ—¶å°šæ•™çˆ¶.jpg  
+    â”‚  
+    â”œâ”€å¨œå¯éœ²éœ²  
+    â”‚      é¹°ä¹‹å®ˆæŠ¤.jpg  
+    â”‚  
+    â”œâ”€å¬´æ”¿  
+    â”‚      ä¼˜é›…æ‹äºº.jpg  
+    â”‚      æ‘‡æ»šå·¨æ˜Ÿ.jpg  
+    â”‚      æš—å¤œè´µå…¬å­.jpg  
+    â”‚      çŽ‹è€…ç‹¬å°Š.jpg  
+    â”‚  
+    â”œâ”€å­™å°šé¦™  
+    â”‚      åƒé‡‘é‡å¼©.jpg  
+    â”‚      æœ«æ—¥æœºç”².jpg  
+    â”‚      æ€æ‰‹ä¸å¤ªå†·.jpg  
+    â”‚      æ°´æžœç”œå¿ƒ.jpg  
+    â”‚      ç«ç‚®åƒé‡‘.jpg  
+    â”‚      è”·è–‡æ‹äºº.jpg  
+    â”‚  
+    â”œâ”€å­™æ‚Ÿç©º  
+    â”‚      åœ°ç‹±ç«.jpg  
+    â”‚      ç¾ŽçŒ´çŽ‹.jpg  
+    â”‚      è‡³å°Šå®.jpg  
+    â”‚      è¥¿éƒ¨å¤§é•–å®¢.jpg  
+    â”‚      é½å¤©å¤§åœ£.jpg  
+    â”‚  
+    â”œâ”€å­™è†‘  
+    â”‚      å¤©ä½¿ä¹‹ç¿¼.jpg  
+    â”‚      å¦–ç²¾çŽ‹.jpg  
+    â”‚      æœªæ¥æ—…è¡Œ.jpg  
+    â”‚      é€†æµä¹‹æ—¶.jpg  
+    â”‚  
+    â”œâ”€å®‰çªæ‹‰  
+    â”‚      æš—å¤œèèŽ‰.jpg  
+    â”‚      çŽ©å¶å¯¹å¯¹ç¢°.jpg  
+    â”‚      é­”æ³•å°åŽ¨å¨˜.jpg  
+    â”‚  
+    â”œâ”€å®«æœ¬æ­¦è—  
+    â”‚      ä¸‡è±¡åˆæ–°.jpg  
+    â”‚      å‰‘åœ£.jpg  
+    â”‚      åœ°ç‹±ä¹‹çœ¼.jpg  
+    â”‚      æœªæ¥çºªå…ƒ.jpg  
+    â”‚      éœ¸çŽ‹ä¸¸.jpg  
+    â”‚      é¬¼å‰‘æ­¦è—.jpg  
+    â”‚  
+    â”œâ”€å°ä¹”  
+    â”‚      ä¸‡åœ£å‰å¤œ.jpg  
+    â”‚      å¤©é¹…ä¹‹æ¢¦.jpg  
+    â”‚      æ‹ä¹‹å¾®é£Ž.jpg  
+    â”‚      çº¯ç™½èŠ±å«.jpg  
+    â”‚      ç¼¤çº·ç‹¬è§’å…½.jpg  
+    â”‚  
+    â”œâ”€å¹²å°†èŽ«é‚ª  
+    â”‚      æ·¬å‘½åŒå‰‘.jpg  
+    â”‚      ç¬¬ä¸ƒäººå¶.jpg  
+    â”‚  
+    â”œâ”€åº„å‘¨  
+    â”‚      èœƒæ¥¼çŽ‹.jpg  
+    â”‚      é€é¥å¹»æ¢¦.jpg  
+    â”‚      é²¤é±¼ä¹‹æ¢¦.jpg  
+    â”‚  
+    â”œâ”€å»‰é¢‡  
+    â”‚      åœ°ç‹±å²©é­‚.jpg  
+    â”‚      æ­£ä¹‰çˆ†è½°.jpg  
+    â”‚  
+    â”œâ”€å¼ è‰¯  
+    â”‚      ä¸€åƒé›¶ä¸€å¤œ.jpg  
+    â”‚      å¤©å ‚ç¦éŸ³.jpg  
+    â”‚      è¨€çµä¹‹ä¹¦.jpg  
+    â”‚  
+    â”œâ”€å¼ é£ž  
+    â”‚      ä¹±ä¸–è™Žè‡£.jpg  
+    â”‚      äº”ç¦åŒå¿ƒ.jpg  
+    â”‚      ç¦è¡€ç‹‚å…½.jpg  
+    â”‚  
+    â”œâ”€æˆå‰æ€æ±—  
+    â”‚      ç»´äº¬æŽ å¤ºè€….jpg  
+    â”‚      è‹ç‹¼æœ«è£”.jpg  
+    â”‚  
+    â”œâ”€æ‰é¹Š  
+    â”‚      åŒ–èº«åšå£«.jpg  
+    â”‚      å–„æ¶æ€ªåŒ».jpg  
+    â”‚      æ•‘ä¸–ä¹‹çž³.jpg  
+    â”‚      ç‚¼é‡‘çŽ‹.jpg  
+    â”‚  
+    â”œâ”€æ˜Žä¸–éš  
+    â”‚      å æ˜Ÿæœ¯å£«.jpg  
+    â”‚      çµé­‚åŠ«åœ.jpg  
+    â”‚  
+    â”œâ”€æ›¹æ“  
+    â”‚      å¹½çµèˆ¹é•¿.jpg  
+    â”‚      æ­»ç¥žæ¥äº†.jpg  
+    â”‚      è¶…èƒ½æˆ˜è­¦.jpg  
+    â”‚      é²œè¡€æž­é›„.jpg  
+    â”‚  
+    â”œâ”€æŽå…ƒèŠ³  
+    â”‚      ç‰¹ç§éƒ¨é˜Ÿ.jpg  
+    â”‚      çŽ‹éƒ½å¯†æŽ¢.jpg  
+    â”‚      é»‘çŒ«çˆ±ç³–æžœ.jpg  
+    â”‚  
+    â”œâ”€æŽç™½  
+    â”‚      å‡¤æ±‚å‡°.jpg  
+    â”‚      åƒå¹´ä¹‹ç‹.jpg  
+    â”‚      èŒƒæµ·è¾›.jpg  
+    â”‚      é’èŽ²å‰‘ä»™.jpg  
+    â”‚  
+    â”œâ”€æ¨æˆ¬  
+    â”‚      åŸƒåŠæ³•è€.jpg  
+    â”‚      æ ¹æºä¹‹ç›®.jpg  
+    â”‚  
+    â”œâ”€æ¢¦å¥‡  
+    â”‚      å…¥æ¢¦ä¹‹çµ.jpg  
+    â”‚      ç¾Žæ¢¦æˆçœŸ.jpg  
+    â”‚  
+    â”œâ”€æ©˜å³äº¬  
+    â”‚      ç¥žæ¢¦ä¸€åˆ€.jpg  
+    â”‚  
+    â”œâ”€æ­¦åˆ™å¤©  
+    â”‚      ä¸œæ–¹ä¸è´¥.jpg  
+    â”‚      å¥³å¸.jpg  
+    â”‚      æµ·æ´‹ä¹‹å¿ƒ.jpg  
+    â”‚  
+    â”œâ”€ç‰›é­”  
+    â”‚      ç²¾è‹±é…‹é•¿.jpg  
+    â”‚      è¥¿éƒ¨å¤§é•–å®¢.jpg  
+    â”‚  
+    â”œâ”€ç‹„ä»æ°  
+    â”‚      æ–­æ¡ˆå¤§å¸ˆ.jpg  
+    â”‚      è¶…æ—¶ç©ºæˆ˜å£«.jpg  
+    â”‚      é”¦è¡£å«.jpg  
+    â”‚      é˜´é˜³å¸ˆ.jpg  
+    â”‚      é­”æœ¯å¸ˆ.jpg  
+    â”‚  
+    â”œâ”€çŽ‹æ˜­å›  
+    â”‚      å¶åƒæ­Œæ‰‹.jpg  
+    â”‚      å†°é›ªä¹‹åŽ.jpg  
+    â”‚      å‡¤å‡°äºŽé£ž.jpg  
+    â”‚      ç²¾çµå…¬ä¸».jpg  
+    â”‚  
+    â”œâ”€ç”„å§¬  
+    â”‚      å†°é›ªåœ†èˆžæ›².jpg  
+    â”‚      æ´›ç¥žé™ä¸´.jpg  
+    â”‚      æ¸¸å›­æƒŠæ¢¦.jpg  
+    â”‚      èŠ±å¥½äººé—´.jpg  
+    â”‚  
+    â”œâ”€ç™½èµ·  
+    â”‚      æœ€ç»ˆå…µå™¨.jpg  
+    â”‚      ç‹°.jpg  
+    â”‚      ç™½è‰²æ­»ç¥ž.jpg  
+    â”‚  
+    â”œâ”€ç™¾é‡Œå®ˆçº¦  
+    â”‚      ç»å½±ç¥žæžª.jpg  
+    â”‚      é™è°§ä¹‹çœ¼.jpg  
+    â”‚  
+    â”œâ”€ç™¾é‡ŒçŽ„ç­–  
+    â”‚      åš£ç‹‚ä¹‹é•°.jpg  
+    â”‚      å¨å°¼æ–¯ç‹‚æ¬¢.jpg  
+    â”‚  
+    â”œâ”€ç¨‹å’¬é‡‘  
+    â”‚      åŽå°”è¡—å¤§äº¨.jpg  
+    â”‚      æ˜Ÿé™…é™†æˆ˜é˜Ÿ.jpg  
+    â”‚      çƒ­çƒˆä¹‹æ–§.jpg  
+    â”‚      çˆ±ä¸Žæ­£ä¹‰.jpg  
+    â”‚  
+    â”œâ”€è€å¤«å­  
+    â”‚      ä¸‡å¤é•¿æ˜Ž.jpg  
+    â”‚      åœ£è¯žè€äºº.jpg  
+    â”‚      æ½®æµä»™äºº.jpg  
+    â”‚  
+    â”œâ”€èŠˆæœˆ  
+    â”‚      å¤§ç§¦å®£å¤ªåŽ.jpg  
+    â”‚      æ°¸æ’ä¹‹æœˆ.jpg  
+    â”‚      çº¢æ¡ƒçš‡åŽ.jpg  
+    â”‚  
+    â”œâ”€èŠ±æœ¨å…°  
+    â”‚      ä¼ è¯´ä¹‹åˆƒ.jpg  
+    â”‚      å…”å¥³éƒŽ.jpg  
+    â”‚      å‰‘èˆžè€….jpg  
+    â”‚      æ°´æ™¶çŒŽé¾™è€….jpg  
+    â”‚  
+    â”œâ”€è‹çƒˆ  
+    â”‚      ä¸å±ˆé“å£.jpg  
+    â”‚      çˆ±ä¸Žå’Œå¹³.jpg  
+    â”‚  
+    â”œâ”€è”¡æ–‡å§¬  
+    â”‚      å¤©ç±å¼¦éŸ³.jpg  
+    â”‚      è”·è–‡çŽ‹åº§.jpg  
+    â”‚  
+    â”œâ”€è™žå§¬  
+    â”‚      å‡¯å°”ç‰¹å¥³çŽ‹.jpg  
+    â”‚      åŠ å‹’æ¯”å°å§.jpg  
+    â”‚      æ£®ä¹‹é£Žçµ.jpg  
+    â”‚      éœ¸çŽ‹åˆ«å§¬.jpg  
+    â”‚  
+    â”œâ”€è¯¸è‘›äº®  
+    â”‚      æ˜ŸèˆªæŒ‡æŒ¥å®˜.jpg  
+    â”‚      ç»ä»£æ™ºè°‹.jpg  
+    â”‚      é»„é‡‘åˆ†å‰²çŽ‡.jpg  
+    â”‚  
+    â”œâ”€è²‚è‰  
+    â”‚      ä»²å¤å¤œä¹‹æ¢¦.jpg  
+    â”‚      åœ£è¯žæ‹æ­Œ.jpg  
+    â”‚      å¼‚åŸŸèˆžå¨˜.jpg  
+    â”‚      ç»ä¸–èˆžå§¬.jpg  
+    â”‚      é€æ¢¦ä¹‹éŸ³.jpg  
+    â”‚  
+    â”œâ”€èµµäº‘  
+    â”‚      å˜»å“ˆå¤©çŽ‹.jpg  
+    â”‚      å¼•æ“Žä¹‹å¿ƒ.jpg  
+    â”‚      å¿â—ç‚Žå½±.jpg  
+    â”‚      æœªæ¥çºªå…ƒ.jpg  
+    â”‚      ç™½æ‰§äº‹.jpg  
+    â”‚      çš‡å®¶ä¸Šå°†.jpg  
+    â”‚      è‹å¤©ç¿”é¾™.jpg  
+    â”‚  
+    â”œâ”€è¾¾æ‘©  
+    â”‚      å¤§å‘æ˜Žå®¶.jpg  
+    â”‚      æ‹³åƒ§.jpg  
+    â”‚      æ‹³çŽ‹.jpg  
+    â”‚  
+    â”œâ”€é’Ÿæ— è‰³  
+    â”‚      æµ·æ»©ä¸½å½±.jpg  
+    â”‚      çŽ‹è€…ä¹‹é”¤.jpg  
+    â”‚      ç”ŸåŒ–è­¦æˆ’.jpg  
+    â”‚      é‡Žè›®ä¹‹é”¤.jpg  
+    â”‚  
+    â”œâ”€é’Ÿé¦—  
+    â”‚      åœ°åºœåˆ¤å®˜.jpg  
+    â”‚      è™šçµåŸŽåˆ¤.jpg  
+    â”‚  
+    â”œâ”€é“   
+    â”‚      ç ´ç­åˆƒé”‹.jpg  
+    â”‚      é¾™åŸŸé¢†ä¸».jpg  
+    â”‚  
+    â”œâ”€é˜¿è½²  
+    â”‚      ä¿¡å¿µä¹‹åˆƒ.jpg  
+    â”‚      æš—å¤œçŒ«å¨˜.jpg  
+    â”‚      çˆ±å¿ƒæŠ¤ç†.jpg  
+    â”‚      è‡´å‘½é£ŽåŽ.jpg  
+    â”‚  
+    â”œâ”€é›…å…¸å¨œ  
+    â”‚      åœ£åŸŸä½™æ™–.jpg  
+    â”‚      æˆ˜äº‰å¥³ç¥ž.jpg  
+    â”‚  
+    â”œâ”€éœ²å¨œ  
+    â”‚      å“¥ç‰¹çŽ«ç‘°.jpg  
+    â”‚      æœˆå…‰ä¹‹å¥³.jpg  
+    â”‚      ç´«éœžä»™å­.jpg  
+    â”‚      ç»¯çº¢ä¹‹åˆƒ.jpg  
+    â”‚  
+    â”œâ”€éŸ©ä¿¡  
+    â”‚      å›½å£«æ— åŒ.jpg  
+    â”‚      æ•™å»·ç‰¹ä½¿.jpg  
+    â”‚      ç™½é¾™åŸ.jpg  
+    â”‚      è¡—å¤´éœ¸çŽ‹.jpg  
+    â”‚      é€æ¢¦ä¹‹å½±.jpg  
+    â”‚  
+    â”œâ”€é¡¹ç¾½  
+    â”‚      å¸å›½å…ƒå¸….jpg  
+    â”‚      æµ·æ»©æ´¾å¯¹.jpg  
+    â”‚      èŒæ£’çŽ‹ç‰Œ.jpg  
+    â”‚      è‹ç©¹ä¹‹å…‰.jpg  
+    â”‚      éœ¸çŽ‹.jpg  
+    â”‚      éœ¸çŽ‹åˆ«å§¬.jpg  
+    â”‚  
+    â”œâ”€é©¬å¯æ³¢ç½—  
+    â”‚      æ¿€æƒ…ç»¿èŒµ.jpg  
+    â”‚      è¿œæ¸¸ä¹‹æžª.jpg  
+    â”‚  
+    â”œâ”€é«˜æ¸ç¦»  
+    â”‚      å›é€†åŸæ¸¸.jpg  
+    â”‚      æ­»äº¡æ‘‡æ»š.jpg  
+    â”‚      é‡‘å±žç‹‚æ½®.jpg  
+    â”‚  
+    â”œâ”€é¬¼è°·å­  
+    â”‚      ä¸‡ç‰©æœ‰çµ.jpg  
+    â”‚      é˜¿æ‘©å¸å…¬çˆµ.jpg  
+    â”‚  
+    â”œâ”€é²ç­ä¸ƒå·  
+    â”‚      æœ¨å¶å¥‡é‡è®°.jpg  
+    â”‚      æœºå…³é€ ç‰©.jpg  
+    â”‚      ç”µçŽ©å°å­.jpg  
+    â”‚      ç¦ç¦„å…„å¼Ÿ.jpg  
+    â”‚  
+    â””â”€é»„å¿   
+            ç‡ƒé­‚é‡ç‚®.jpg  
+            èŠåŠ å“¥æ•™çˆ¶.jpg  
