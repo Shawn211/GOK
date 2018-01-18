@@ -1,3 +1,3 @@
 # gok
 
-`[README](/README.md)` `[Tree](/Tree)`
+`[README](/README.md)` `[Tree](/Tree.md)`
